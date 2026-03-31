@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publications — Dr. Mohammad Naiseh</title>
+<meta name="description" content="Full list of publications by Dr. Mohammad Naiseh covering Explainable AI, trust calibration, human-swarm interaction, and responsible AI systems.">
+<meta name="keywords" content="Mohammad Naiseh publications, XAI research, explainable AI papers, trust calibration, human-centred AI">
+<meta name="author" content="Dr. Mohammad Naiseh">
+<meta property="og:title" content="Publications — Dr. Mohammad Naiseh">
+<meta property="og:description" content="Full list of publications by Dr. Mohammad Naiseh covering Explainable AI, trust calibration, human-swarm interaction, and responsible AI systems.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://monaiseh.github.io/portfolio/publications.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin:0;padding:0;font-family: Georgia, 'Times New Roman', serif; font-size: 15px; line-height: 1.7; color: #1a1a1a; background: #ffffff; padding: 2rem 1.5rem; max-width: 860px; margin: 0 auto; }
+  .stats-row { display: flex; gap: 12px; margin-bottom: 2rem; flex-wrap: wrap; }
+  .stat-card { background: #f5f5f3; border-radius: 8px; padding: 12px 18px; flex: 1; min-width: 110px; }
+  .stat-num { font-size: 22px; font-weight: 600; color: #1a1a1a; font-family: 'Helvetica Neue', Arial, sans-serif; }
+  .stat-label { font-size: 12px; color: #666; margin-top: 2px; font-family: 'Helvetica Neue', Arial, sans-serif; }
+  .filter-row { display: flex; gap: 8px; margin-bottom: 1.75rem; flex-wrap: wrap; }
+  .filter-btn { font-size: 12px; padding: 5px 14px; border-radius: 20px; border: 1px solid #ccc; background: transparent; color: #555; cursor: pointer; font-family: 'Helvetica Neue', Arial, sans-serif; transition: all 0.15s; }
+  .filter-btn:hover { border-color: #888; color: #1a1a1a; }
+  .filter-btn.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+  .pub-section { margin-bottom: 2rem; }
+  .pub-section-title { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #999; border-bottom: 1px solid #e8e8e8; padding-bottom: 7px; margin-bottom: 1rem; font-family: 'Helvetica Neue', Arial, sans-serif; }
+  .pub-item { padding: 13px 0; border-bottom: 1px solid #f0f0f0; }
+  .pub-item:last-child { border-bottom: none; }
+  .pub-title { font-size: 14px; font-weight: 600; color: #1a1a1a; margin: 0 0 4px; line-height: 1.5; font-family: 'Helvetica Neue', Arial, sans-serif; }
+  .pub-authors { font-size: 13px; color: #555; margin: 0 0 3px; font-family: 'Helvetica Neue', Arial, sans-serif; }
+  .pub-authors .me { font-weight: 700; color: #1a1a1a; }
+  .pub-venue { font-size: 13px; color: #666; margin: 0 0 7px; font-style: italic; font-family: Georgia, serif; }
+  .pub-meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .badge { font-size: 11px; padding: 2px 9px; border-radius: 4px; font-weight: 600; font-family: 'Helvetica Neue', Arial, sans-serif; letter-spacing: 0.02em; }
+  .badge-journal { background: #e8f0fb; color: #1a56b0; }
+  .badge-conf { background: #e6f4ea; color: #1e7e34; }
+  .badge-chapter { background: #fff3e0; color: #b45309; }
+  .badge-preprint { background: #f3f0ff; color: #5b21b6; }
+  .pub-year { font-size: 12px; color: #aaa; font-family: 'Helvetic Neue', Arial, sans-serif; }
+  a { color: #1a56b0; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .scholar-link { display: inline-block; margin-bottom: 1.75rem; font-size: 13px; font-family: 'Helvetica Neue', Arial, sans-serif; color: #1a56b0; border: 1px solid #c5d8f5; padding: 6px 14px; border-radius: 6px; background: #f0f6ff; }
+  .scholar-link:hover { background: #e0eeff; text-decoration: none; }
+</style>
+</head>
+<body style="margin:0;padding:0;">
+<nav style="border-bottom:1px solid #e8e8e8;padding:0.85rem 1.5rem;max-width:860px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+  <a href="index.html" style="text-decoration:none;">
+    <span style="font-family:Georgia,serif;font-size:18px;font-weight:400;color:#8C7B5E;">Mohammad </span><span style="font-family:Georgia,serif;font-size:18px;font-weight:700;color:#2C2416;">Naiseh</span>
+  </a>
+  <div style="display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end;" id="nav-links">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="publications.html" class="nav-link active">Publications</a>
+    <a href="teaching.html" class="nav-link">Teaching</a>
+    <a href="blog.html" class="nav-link">Blog</a>
+    <a href="presentations.html" class="nav-link">Talks</a>
+  </div>
+</nav>
+<style>
+  .nav-link { font-size:13px;padding:5px 11px;border-radius:6px;text-decoration:none;color:#555;font-family:'Helvetica Neue',Arial,sans-serif;transition:background 0.15s,color 0.15s; }
+  .nav-link:hover { background:#f5f0e8;color:#2C2416; }
+  .nav-link.active { background:#faf7f2;color:#2C2416;font-weight:600;border:1px solid #d4c9b8; }
+  @media(max-width:540px){ #nav-links { gap:2px; } .nav-link { font-size:12px;padding:4px 8px; } }
+</style>
+<div style="max-width:860px;margin:0 auto;padding:2rem 1.5rem;">
+
+<div class="stats-row">
+  <div class="stat-card"><div class="stat-num">47+</div><div class="stat-label">Total publications</div></div>
+  <div class="stat-card"><div class="stat-num">790+</div><div class="stat-label">Citations</div></div>
+  <div class="stat-card"><div class="stat-num">20</div><div class="stat-label">Journal articles</div></div>
+  <div class="stat-card"><div class="stat-num">24</div><div class="stat-label">Conference papers</div></div>
+</div>
+
+<a class="scholar-link" href="https://scholar.google.co.uk/citations?user=5zRtnrcAAAAJ&hl=en" target="_blank">&#x1F4D6; Full list on Google Scholar</a>
+
+<div class="filter-row">
+  <button class="filter-btn active" onclick="filterPubs('all', this)">All</button>
+  <button class="filter-btn" onclick="filterPubs('journal', this)">Journals</button>
+  <button class="filter-btn" onclick="filterPubs('conf', this)">Conferences</button>
+  <button class="filter-btn" onclick="filterPubs('chapter', this)">Book chapters</button>
+</div>
+
+<div id="pub-list">
+
+<!-- 2026 -->
+<div class="pub-section" data-year="2026">
+  <div class="pub-section-title">2026</div>
+
+  <div class="pub-item" data-type="journal">
+    <p class="pub-title">Steering through uncertainty: a systematic review of liability communication in autonomous vehicles</p>
+    <p class="pub-authors">Akarsu T., Shukla P., Winter P., Onitiu D., <span class="me">Naiseh M.</span>, Nichele E., Lisinska J., Hyde R.</p>
+    <p class="pub-venue">Transport Reviews, 46(2), 270–296</p>
+    <div class="pub-meta"><span class="badge badge-journal">Journal</span><span class="pub-year">Routledge · 2026</span></div>
+  </div>
+
+  <div class="pub-item" data-type="journal">
+    <p class="pub-title">Health care professionals' perceptions of machine learning based clinical decision support systems for oesophageal cancer management</p>
+    <p class="pub-authors">Webb C., Thavanesan N., <span class="me">Naiseh M.</span>, Dewar-Haggart R., Underwood T., Vigneswaran G.</p>
+    <p class="pub-venue">Computers in Biology and Medicine, 200, 111373</p>
+    <div class="pub-meta"><span class="badge badge-journal">Journal</span><span class="pub-year">Pergamon · 2026</span></div>
+  </div>
+
+  <div class="pub-item" data-type="journal">
+    <p class="pub-title">What's informing trust and adoption? Can current cognitive models support expert adoption of AI?</p>
+    <p class="pub-authors">Lamb S.C., Byrne M., Norman T.J., Ramchurn S.D., <span class="me">Naiseh M.</span></p>
+    <p class="pub-venue">Journal of Cognitive Engineering and Decision Making</p>
+    <div class="pub-meta"><span class="badge badge-journal">Journal</span><span class="pub-year">SAGE · 2026</span></div>
+  </div>
+</div>
+
+<!-- 2025 -->
+<div class="pub-section" data-year="2025">
+  <div class="pub-section-title">2025</div>
+
+  <div class="pub-item" data-type="journal">
+    <p class="pub-title">Oesophageal cancer multi-disciplinary tool: a co-designed, externally validated, machine learning tool for oesophageal cancer decision making</p>
+    <p class="pub-authors">Thavanesan N., <span class="me">Naiseh M.</span>, Terol M., Rahman S.A., Hill S.L., Parfitt C., Walters Z.S., Ramchurn S., Markar S., Owen R.</p>
+    <p class="pub-venue">EClinicalMedicine, 89</p>
+    <div class="pub-meta"><span class="badge badge-journal">Journal</span><span class="pub-year">Elsevier · 2025</span></div>
+  </div>
+
+  <div class="pub-item" data-type="journal">
+    <p class="pub-title">Attitudes towards AI: the interplay of self-efficacy, well-being, and competency</p>
+    <p class="pub-authors"><span class="me">Naiseh M.</span>, Babiker A., Al-Shakhsi S., Cemiloglu D., Al-Thani D., Montag C., Ali R.</p>
+    <p class="pub-venue">Journal of Technology in Behavioral Science, 1–14</p>
+    <div class="pub-meta"><span class="badge badge-journal">Journal</span><span class="pub-year">Springer · 2025</span></div>
+  </div>
+
+  <div class="pub-item" data-type="journal">
+    <p class="pub-title">A user study evaluation of predictive formal modelling at runtime in human-swarm interaction</p>
+    <p class="pub-authors">Abioye A.O., Hunt W., Gu Y., Schneiders E., <span class="me">Naiseh M.</span>, Archibald B., Sevegnani M., Ramchurn S.D., Fischer J.E., Soorati M.D.</p>
+    <p class="pub-venue">ACM Transactions on Human-Robot Interaction, 14(4), 1–24</p>
+    <div class="pub-meta"><span class="badge badge-journal">Journal</span><span class="pub-year">ACM · 2025</span></div>
+  </div>
+
+  <div class="pub-item" data-type="journal">
+    <p class="pub-title">Social media vs. users' wellbeing and the role of personal factors: a study on Arab and British samples</p>
+    <p class="pub-authors">Cemiloglu D., Alshakhsi S., Babiker A., <span class="me">Naiseh M.</span>, Al-Thani D., Ali R.</p>
+    <p class="pub-venue">International Journal of Human–Computer Interaction, 41(22), 14122–14140</p>
+    <div class="pub-meta"><span class="badge badge-journal">Journal</span><span class="pub-year">Taylor & Francis · 2025</span></div>
+  </div>
+
+  <div class="pub-item" data-type="journal">
+    <p class="pub-title">Contrasting and predicting social media's role in addictive use and well-being</p>
+    <p class="pub-authors">Cemiloglu D., Babiker A., Alshakhsi S., <span class="me">Naiseh M.</span>, Al-Thani D., Ali R.</p>
+    <p class="pub-venue">Journal of Technology in Behavioral Science, 1–16</p>
+    <div class="pub-meta"><span class="badge badge-journal">Journal</span><span class="pub-year">Springer · 2025</span></div>
+  </div>
+
+  <div class="pub-item" data-type="journal">
+    <p class="pub-title">A UK perspective on responsible education for responsible AI: a multidisciplinary review and evaluation framework</p>
+    <p class="pub-authors">Klyshbekova M., Cruz G.R., Bentley C., Garasto S., Brown A.A., Aicardi C., Ball B., <span class="me">Naiseh M.</span>, Andrei O.</p>
+    <p class="pub-venue">Journal of Responsible Technology</p>
+    <div class="pub-meta"><span class="badge badge-journal">Journal</span><span class="pub-year">Elsevier · 2025</span></div>
+  </div>
+
+  <div class="pub-item" data-type="conf">
+    <p class="pub-title">Development of a persuasive user experience research (UXR) point of view for explainable artificial intelligence (XAI)</p>
+    <p class="pub-authors"><span class="me">Naiseh M.</span>, Dogan H., Giff S., Jiang N.</p>
+    <p class="pub-venue">Workshop on Defining a UX Research Point of View, CHI 2025, Yokohama, Japan</p>
+    <div class="pub-meta"><span class="badge badge-conf">Conference</span><span class="pub-year">CHI · 2025</span></div>
+  </div>
+
+  <div class="pub-item" data-type="conf">
+    <p class="pub-title">Designing for effective human-XAI interaction: user experience research plays and cards</p>
+    <p class="pub-authors"><span class="me">Naiseh M.</span>, Dogan H., Giff S., Malhi A., Jiang N.</p>
+    <p class="pub-venue">EXTRAAMAS 2025 — International Workshop on Explainable, Trustworthy, and Responsible AI, pp. 229–241</p>
+    <div class="pub-meta"><span class="badge badge-conf">Conference</span><span class="pub-year">Springer · 2025</span></div>
+  </div>
+
+  <div class="pub-item" data-type="conf">
+    <p class="pub-title">Better AI with designed friction: theories, applications and research agenda</p>
+    <p class="pub-authors">Natali C., <span class="me">Naiseh M.</span>, Cabitza F., Frischmann B.</p>
+    <p class="pub-venue">Hybrid Human Artificial Intelligence (HHAI) 2025, vol. 408, pp. 518–521</p>
+    <div class="pub-meta"><span class="badge badge-conf">Conference</span><span class="pub-year">HHAI · 2025</span></div>
+  </div>
+</div>
+
+<!-- 2024 -->
+<div class="pub-section" data-year="2024">
+  <div class="pub-section-title">2024</div>
+
+  <div class="pub-item" data-type="journal">
+    <p class="pub-title">C-XAI: a conceptual framework for designing XAI tools that support trust calibration</p>
+    <p class="pub-authors"><span class="me">Naiseh M.</span>, Simkute A., Zieni B., Jiang N., Ali R.</p>
+    <p class="pub-venue">Journal of Responsible Technology, 17, 100076</p>
+    <div class="pub-meta"><span class="badge badge-journal">Journal</span><span class="pub-year">Elsevier · 2024</span></div>
+  </div>
+
+  <div class="pub-item" data-type="journal">
+    <p class="pub-title">Trust, risk perception, and intention to use autonomous vehicles: an interdisciplinary bibliometric review</p>
+    <p class="pub-authors"><span class="me">Naiseh M.</span>, Clark J., Akarsu T., Hanoch Y., Brito M., Eald M., Webster T., Shukla P.</p>
+    <p class="pub-venue">AI & Society</p>
+    <div class="pub-meta"><span class="badge badge-journal">Journal</span><span class="pub-year">Springer · 2024</span></div>
+  </div>
+
+  <div class="pub-item" data-type="journal">
+    <p class="pub-title">Adaptive human-swarm interaction based on workload measurement using functional near-infrared spectroscopy</p>
+    <p class="pub-authors">Abioye A.O., Landowska A., Hunt W., Maior H., Ramchurn S.D., <span class="me">Naiseh M.</span>, Banks A., Soorati M.D.</p>
+    <p class="pub-venue">arXiv preprint arXiv:2405.07834</p>
+    <div class="pub-meta"><span class="badge badge-preprint">Preprint</span><span class="pub-year">2024</span></div>
+  </div>
+
+  <div class="pub-item" data-type="chapter">
+    <p class="pub-title">Enabling trustworthiness in human-swarm systems through a digital twin</p>
+    <p class="pub-authors">Soorati M.D., <span class="me">Naiseh M.</span>, Hunt W., Parnell K., Clark J., Ramchurn S.D.</p>
+    <p class="pub-venue">In: Putting AI in the Critical Loop, pp. 93–125</p>
+    <div class="pub-meta"><span class="badge badge-chapter">Book chapter</span><span class="pub-year">Academic Press · 2024</span></div>
+  </div>
+
+  <div class="pub-item" data-type="chapter">
+    <p class="pub-title">Social eXplainable AI (Social XAI): towards expanding the social benefits of XAI</p>
+    <p class="pub-authors"><span class="me">Naiseh M.</span></p>
+    <p class="pub-venue">In: The Impact of Artificial Intelligence on Societies, pp. 169–178</p>
+    <div class="pub-meta"><span class="badge badge-chapter">Book chapter</span><span class="pub-year">Springer · 2024</span></div>
+  </div>
+
+  <div class="pub-item" data-type="conf">
+    <p class="pub-title">XAI for group-AI interaction: towards collaborative and inclusive explanation</p>
+    <p class="pub-authors"><span class="me">Naiseh M.</span>, Webb C., Underwood T., Ramchurn G., Walters Z., Thavanesan N., Vigneswaran G.</p>
+    <p class="pub-venue">XAI 2024 — Second World Conference on Explainable AI, Valletta, Malta</p>
+    <div class="pub-meta"><span class="badge badge-conf">Conference</span><span class="pub-year">XAI · 2024</span></div>
+  </div>
+
+  <div class="pub-item" data-type="conf">
+    <p class="pub-title">The effect of predictive formal modelling at runtime on performance in human-swarm interaction</p>
+    <p class="pub-authors">Abioye A.O., Hunt W., Gu Y., Schneiders E., <span class="me">Naiseh M.</span>, Fischer J.E., Ramchurn S.D., Soorati M.D., Archibald B., Sevegnani M.</p>
+    <p class="pub-venue">Companion of the 2024 ACM/IEEE International Conference on Human-Robot Interaction, pp. 172–176</p>
+    <div class="pub-meta"><span class="badge badge-conf">Conference</span><span class="pub-year">HRI · 2024</span></div>
+  </div>
+
+  <div class="pub-item" data-type="conf">
+    <p class="pub-title">Real-time Twitter data sentiment analysis to predict the recession in the UK using graph neural networks</p>
+    <p class="pub-authors">Malhi A., <span class="me">Naiseh M.</span>, Jangra K.</p>
+    <p class="pub-venue">2024 International Wireless Communications and Mobile Computing (IWCMC), pp. 1595–1600</p>
+    <div class="pub-meta"><span class="badge badge-conf">Conference</span><span class="pub-year">IEEE · 2024</span></div>
+  </div>
+
+  <div class="pub-item" data-type="conf">
+    <p class="pub-title">Explainable AI for intrusion detection systems: a model development and experts' evaluation</p>
+    <p class="pub-authors">Durojaye H., <span class="me">Naiseh M.</span></p>
+    <p class="pub-venue">Intelligent Systems Conference, pp. 301–318</p>
+    <div class="pub-meta"><span class="badge badge-conf">Conference</span><span class="pub-year">Springer · 2024</span></div>
+  </div>
+</div>
+
+<!-- 2023 -->
+<div class="pub-section" data-year="2023">
+  <div class="pub-section-title">2023</div>
+
+  <div class="pub-item" data-type="journal">
+    <p class="pub-title">How the different explanation classes impact trust calibration: the case of clinical decision support systems</p>
+    <p class="pub-authors"><span class="me">Naiseh M.</span>, Al-Thani D., Jiang N., Ali R.</p>
+    <p class="pub-venue">International Journal of Human-Computer Studies, 169, 102941</p>
+    <div class="pub-meta"><span class="badge badge-journal">Journal</span><span class="pub-year">Academic Press · 2023</span></div>
+  </div>
+
+  <div class="pub-item" data-type="conf">
+    <p class="pub-title">The well-being of autonomous vehicles (AVs) users under uncertain situations</p>
+    <p class="pub-authors"><span class="me">Naiseh M.</span>, Shukla P.</p>
+    <p class="pub-venue">First International Symposium on Trustworthy Autonomous Systems, pp. 1–8</p>
+    <div class="pub-meta"><span class="badge badge-conf">Conference</span><span class="pub-year">TAS · 2023</span></div>
+  </div>
+
+  <div class="pub-item" data-type="conf">
+    <p class="pub-title">Intersectional analysis of the challenges and opportunities of equitable remote operation in the UK maritime sector</p>
+    <p class="pub-authors">Cai A., Bentley C.M., Zamani E., <span class="me">Naiseh M.</span>, Sbaffi L.</p>
+    <p class="pub-venue">First International Symposium on Trustworthy Autonomous Systems, pp. 1–8</p>
+    <div class="pub-meta"><span class="badge badge-conf">Conference</span><span class="pub-year">TAS · 2023</span></div>
+  </div>
+
+  <div class="pub-item" data-type="conf">
+    <p class="pub-title">The effect of data visualisation quality and task density on human-swarm interaction</p>
+    <p class="pub-authors">Abioye A.O., <span class="me">Naiseh M.</span>, Hunt W., Clark J., Ramchurn S.D., Soorati M.D.</p>
+    <p class="pub-venue">32nd IEEE International Conference on Robot and Human Interactive Communication (RO-MAN), pp. 1494–1501</p>
+    <div class="pub-meta"><span class="badge badge-conf">Conference</span><span class="pub-year">IEEE · 2023</span></div>
+  </div>
+</div>
+
+<!-- 2022 -->
+<div class="pub-section" data-year="2022">
+  <div class="pub-section-title">2022</div>
+
+  <div class="pub-item" data-type="conf">
+    <p class="pub-title">Outlining the design space of eXplainable swarm (xSwarm): experts' perspective</p>
+    <p class="pub-authors"><span class="me">Naiseh M.</span>, Soorati M.D., Ramchurn S.</p>
+    <p class="pub-venue">International Symposium on Distributed Autonomous Robotic Systems, pp. 28–41</p>
+    <div class="pub-meta"><span class="badge badge-conf">Conference</span><span class="pub-year">DARS · 2022</span></div>
+  </div>
+
+  <div class="pub-item" data-type="conf">
+    <p class="pub-title">Trustworthy autonomous systems (TAS): engaging TAS experts in curriculum design</p>
+    <p class="pub-authors"><span class="me">Naiseh M.</span>, Bentley C., Ramchurn S.D.</p>
+    <p class="pub-venue">2022 IEEE Global Engineering Education Conference (EDUCON), pp. 901–905</p>
+    <div class="pub-meta"><span class="badge badge-conf">Conference</span><span class="pub-year">IEEE EDUCON · 2022</span></div>
+  </div>
+
+  <div class="pub-item" data-type="conf">
+    <p class="pub-title">Methods, tools and techniques for trustworthy autonomous systems (TAS) design and development</p>
+    <p class="pub-authors"><span class="me">Naiseh M.</span>, Bentley C., Ramchurn S., Williams E., Awad E., Alix C.</p>
+    <p class="pub-venue">Companion of the 2022 ACM SIGCHI Symposium on Engineering Interactive Computing Systems, pp. 66–69</p>
+    <div class="pub-meta"><span class="badge badge-conf">Conference</span><span class="pub-year">ACM SIGCHI · 2022</span></div>
+  </div>
+
+  <div class="pub-item" data-type="conf">
+    <p class="pub-title">Industry led use-case development for human-swarm operations</p>
+    <p class="pub-authors">Clark J.R., <span class="me">Naiseh M.</span>, Fischer J., Galvez Trigo M., Parnell K., Brito M., Bodenmann A., Ramchurn S.D., Divband Soorati M.</p>
+    <p class="pub-venue">AAAI 2022 Spring Symposium: Putting AI in the Critical Loop</p>
+    <div class="pub-meta"><span class="badge badge-conf">Conference</span><span class="pub-year">AAAI · 2022</span></div>
+  </div>
+
+  <div class="pub-item" data-type="journal">
+    <p class="pub-title">Learning from expert teams</p>
+    <p class="pub-authors">Lamb S.C., <span class="me">Naiseh M.</span>, Clark J.R., Ramchurn S.D., Norman T.J.</p>
+    <p class="pub-venue">Contemporary Ergonomics & Human Factors 2022, p. 48</p>
+    <div class="pub-meta"><span class="badge badge-journal">Journal</span><span class="pub-year">2022</span></div>
+  </div>
+</div>
+
+<!-- 2021 -->
+<div class="pub-section" data-year="2021">
+  <div class="pub-section-title">2021</div>
+
+  <div class="pub-item" data-type="journal">
+    <p class="pub-title">Explainable recommendation: when design meets trust calibration</p>
+    <p class="pub-authors"><span class="me">Naiseh M.</span>, Al-Thani D., Jiang N., Ali R.</p>
+    <p class="pub-venue">World Wide Web — Special Issue on Explainability in the Web, 24(5), 1857–1884</p>
+    <div class="pub-meta"><span class="badge badge-journal">Journal</span><span class="pub-year">Springer · 2021</span></div>
+  </div>
+
+  <div class="pub-item" data-type="journal">
+    <p class="pub-title">Explainable recommendations and calibrated trust: two systematic user errors</p>
+    <p class="pub-authors"><span class="me">Naiseh M.</span>, Cemiloglu D., Jiang N., Althani D., Ali R.</p>
+    <p class="pub-venue">The Computer Journal — Special Issue on Explainable AI and Machine Learning</p>
+    <div class="pub-meta"><span class="badge badge-journal">Journal</span><span class="pub-year">2021</span></div>
+  </div>
+
+  <div class="pub-item" data-type="conf">
+    <p class="pub-title">Nudging through friction: an approach for calibrating trust in explainable AI</p>
+    <p class="pub-authors"><span class="me">Naiseh M.</span>, Al-Mansoori R.S., Al-Thani D., Jiang N., Ali R.</p>
+    <p class="pub-venue">8th International Conference on Behavioral and Social Computing (BESC)</p>
+    <div class="pub-meta"><span class="badge badge-conf">Conference</span><span class="pub-year">BESC · 2021</span></div>
+  </div>
+
+  <div class="pub-item" data-type="conf">
+    <p class="pub-title">The fine line between persuasion and digital addiction</p>
+    <p class="pub-authors">Cemiloglu D., <span class="me">Naiseh M.</span>, Catania M., Oinas-Kukkonen H., Ali R.</p>
+    <p class="pub-venue">International Conference on Persuasive Technology, pp. 289–307</p>
+    <div class="pub-meta"><span class="badge badge-conf">Conference</span><span class="pub-year">Springer · 2021</span></div>
+  </div>
+
+  <div class="pub-item" data-type="conf">
+    <p class="pub-title">Digital wellbeing for all: expanding inclusivity to embrace diversity in socio-emotional status</p>
+    <p class="pub-authors">Al-Mansoori R.S., <span class="me">Naiseh M.</span>, Al-Thani D., Ali R.</p>
+    <p class="pub-venue">34th British HCI Conference (HCI2021)</p>
+    <div class="pub-meta"><span class="badge badge-conf">Conference</span><span class="pub-year">BCS HCI · 2021</span></div>
+  </div>
+</div>
+
+<!-- 2020 -->
+<div class="pub-section" data-year="2020">
+  <div class="pub-section-title">2020</div>
+
+  <div class="pub-item" data-type="conf">
+    <p class="pub-title">Explainable recommendations in intelligent systems: delivery methods, modalities and risks</p>
+    <p class="pub-authors"><span class="me">Naiseh M.</span>, Jiang N., Ma J., Ali R.</p>
+    <p class="pub-venue">14th International Conference on Research Challenges in Information Science (RCIS)</p>
+    <div class="pub-meta"><span class="badge badge-conf">Conference</span><span class="pub-year">RCIS · 2020</span></div>
+  </div>
+
+  <div class="pub-item" data-type="conf">
+    <p class="pub-title">Personalising explainable recommendations: literature and conceptualisation</p>
+    <p class="pub-authors"><span class="me">Naiseh M.</span>, Jiang N., Ma J., Ali R.</p>
+    <p class="pub-venue">World Conference on Information Systems and Technologies, pp. 518–533</p>
+    <div class="pub-meta"><span class="badge badge-conf">Conference</span><span class="pub-year">WorldCIST · 2020</span></div>
+  </div>
+
+  <div class="pub-item" data-type="conf">
+    <p class="pub-title">Explainability design patterns in clinical decision support systems</p>
+    <p class="pub-authors"><span class="me">Naiseh M.</span></p>
+    <p class="pub-venue">International Conference on Research Challenges in Information Science, pp. 613–620</p>
+    <div class="pub-meta"><span class="badge badge-conf">Conference</span><span class="pub-year">RCIS · 2020</span></div>
+  </div>
+
+  <div class="pub-item" data-type="conf">
+    <p class="pub-title">Online peer support groups for behavior change: moderation requirements</p>
+    <p class="pub-authors">Aldhayan M., <span class="me">Naiseh M.</span>, McAlaney J., Ali R.</p>
+    <p class="pub-venue">International Conference on Research Challenges in Information Science, pp. 157–173</p>
+    <div class="pub-meta"><span class="badge badge-conf">Conference</span><span class="pub-year">RCIS · 2020</span></div>
+  </div>
+</div>
+
+</div>
+
+<script>
+function filterPubs(type, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.pub-item').forEach(function(item) {
+    item.style.display = (type === 'all' || item.dataset.type === type) ? '' : 'none';
+  });
+  document.querySelectorAll('.pub-section').forEach(function(sec) {
+    var visible = Array.from(sec.querySelectorAll('.pub-item')).some(function(i) { return i.style.display !== 'none'; });
+    sec.style.display = visible ? '' : 'none';
+  });
+}
+</script>
+
+</div>
+</body>
+</html>
