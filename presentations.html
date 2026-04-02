@@ -3,56 +3,59 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Talks & Presentations — Dr. Mohammad Naiseh</title>
-<meta name="description" content="Conference presentations and talks by Dr. Mohammad Naiseh on trustworthy autonomous systems, explainable AI, and human-centred AI design.">
-<meta name="keywords" content="Mohammad Naiseh talks, conference presentations, XAI presentations, trustworthy AI">
+<title>Talks, Workshops & Presentations — Dr. Mohammad Naiseh</title>
+<meta name="description" content="Workshops organised and conference presentations by Dr. Mohammad Naiseh on explainable AI, trustworthy autonomous systems, and human-centred AI.">
 <meta name="author" content="Dr. Mohammad Naiseh">
-<meta property="og:title" content="Talks & Presentations — Dr. Mohammad Naiseh">
-<meta property="og:description" content="Conference presentations and talks by Dr. Mohammad Naiseh on trustworthy autonomous systems, explainable AI, and human-centred AI design.">
-<meta property="og:type" content="website">
-<link rel="canonical" href="https://mnaiseh.github.io/portfolio/presentations.html">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { margin:0;padding:0;font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;line-height:1.7;color:#1a1a1a;background:#ffffff; }
-
-  .intro { font-size: 14px; color: #555; font-family: Georgia, serif; font-style: italic; margin-bottom: 1.75rem; line-height: 1.75; }
-
-  .section-title { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #999; border-bottom: 1px solid #e8e8e8; padding-bottom: 7px; margin-bottom: 1.25rem; }
-
-  .presentations { display: flex; flex-direction: column; gap: 24px; }
-
-  .pres-card { border: 1px solid #e8e8e8; border-radius: 10px; overflow: hidden; background: #fff; transition: border-color 0.15s, box-shadow 0.15s; }
-  .pres-card:hover { border-color: #bbb; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-
-  .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; background: #f5f5f3; }
-  .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-
-  .video-thumb { position: relative; cursor: pointer; }
-  .video-thumb img { width: 100%; display: block; aspect-ratio: 16/9; object-fit: cover; }
-  .play-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.25); transition: background 0.15s; }
-  .video-thumb:hover .play-overlay { background: rgba(0,0,0,0.38); }
-  .play-btn { width: 56px; height: 56px; border-radius: 50%; background: rgba(255,255,255,0.92); display: flex; align-items: center; justify-content: center; }
-  .play-btn::after { content: ''; display: block; width: 0; height: 0; border-top: 11px solid transparent; border-bottom: 11px solid transparent; border-left: 18px solid #1a1a1a; margin-left: 4px; }
-
-  .pres-body { padding: 14px 16px 16px; }
-  .pres-title { font-size: 14px; font-weight: 600; color: #1a1a1a; line-height: 1.45; margin-bottom: 8px; }
-
-  .pres-meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
-  .tag { font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
-  .tag-venue { background: #f3f0ff; color: #5b21b6; }
-  .tag-loc   { background: #f5f5f3; color: #888; }
-  .tag-year  { background: #e8f0fb; color: #1a56b0; }
-
-  .watch-link { display: inline-flex; align-items: center; gap: 5px; margin-top: 10px; font-size: 12px; color: #1a56b0; text-decoration: none; }
-  .watch-link:hover { text-decoration: underline; }
-
+  body { margin:0;padding:0;font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;line-height:1.7;color:#1a1a1a;background:#fff; }
   .nav-link { font-size:13px;padding:5px 11px;border-radius:6px;text-decoration:none;color:#555;font-family:'Helvetica Neue',Arial,sans-serif;transition:background 0.15s,color 0.15s; }
   .nav-link:hover { background:#f5f0e8;color:#2C2416; }
   .nav-link.active { background:#faf7f2;color:#2C2416;font-weight:600;border:1px solid #d4c9b8; }
-  @media(max-width:540px){ .nav-link { font-size:12px;padding:4px 8px; } }
+  .content { max-width:860px;margin:0 auto;padding:2rem 1.5rem; }
+  .intro { font-size:14px;color:#555;font-family:Georgia,serif;font-style:italic;margin-bottom:1.5rem;line-height:1.75; }
+  .stats-row { display:flex;gap:10px;margin-bottom:1.5rem;flex-wrap:wrap; }
+  .stat-pill { background:#faf7f2;border:1px solid #d4c9b8;border-radius:20px;padding:5px 14px;font-size:12px;color:#5a4a35;font-weight:500; }
+  .tab-bar { display:flex;gap:0;border-bottom:1px solid #e8e8e8;margin-bottom:1.75rem; }
+  .tab-btn { font-size:13px;font-weight:500;padding:10px 20px;border:none;background:transparent;cursor:pointer;color:#888;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color 0.15s,border-color 0.15s;font-family:'Helvetica Neue',Arial,sans-serif; }
+  .tab-btn:hover { color:#2C2416; }
+  .tab-btn.active { color:#2C2416;border-bottom-color:#2C2416; }
+  .tab-panel { display:none; }
+  .tab-panel.active { display:block; }
+  .workshop-grid { display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:16px; }
+  @media(max-width:600px){ .workshop-grid { grid-template-columns:1fr; } }
+  .workshop-card { border:1px solid #e8e8e8;border-radius:10px;overflow:hidden;transition:border-color 0.15s,box-shadow 0.15s;display:flex;flex-direction:column; }
+  .workshop-card:hover { border-color:#bbb;box-shadow:0 2px 10px rgba(0,0,0,0.07); }
+  .workshop-img { width:100%;height:140px;object-fit:cover;display:block; }
+  .workshop-body { padding:14px 16px;flex:1;display:flex;flex-direction:column;gap:8px; }
+  .workshop-title { font-size:13px;font-weight:600;color:#1a1a1a;line-height:1.4; }
+  .workshop-tags { display:flex;gap:5px;flex-wrap:wrap; }
+  .tag { font-size:11px;padding:2px 8px;border-radius:4px;font-weight:500; }
+  .tag-organiser { background:#2C2416;color:#fff; }
+  .tag-venue { background:#f5f5f3;color:#666; }
+  .tag-hhai { background:#e6f4ea;color:#1e7e34; }
+  .tag-iros { background:#fdf3e3;color:#b45309; }
+  .tag-icra { background:#f3f0ff;color:#5b21b6; }
+  .tag-acm  { background:#e8f0fb;color:#1a56b0; }
+  .workshop-desc { font-size:12px;color:#666;line-height:1.65;font-family:Georgia,serif;flex:1; }
+  .workshop-footer { display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid #f0f0f0;margin-top:auto; }
+  .workshop-date { font-size:11px;color:#aaa; }
+  .workshop-link { font-size:12px;color:#1a56b0;text-decoration:none; }
+  .workshop-link:hover { text-decoration:underline; }
+  .pres-list { display:flex;flex-direction:column;gap:14px; }
+  .pres-card { border:1px solid #e8e8e8;border-radius:10px;overflow:hidden;transition:border-color 0.15s,box-shadow 0.15s; }
+  .pres-card:hover { border-color:#bbb;box-shadow:0 2px 8px rgba(0,0,0,0.06); }
+  .video-wrapper { position:relative;padding-bottom:56.25%;height:0;background:#f5f5f3; }
+  .video-wrapper iframe { position:absolute;top:0;left:0;width:100%;height:100%;border:none; }
+  .pres-body { padding:14px 16px; }
+  .pres-title { font-size:14px;font-weight:600;color:#1a1a1a;line-height:1.45;margin-bottom:8px; }
+  .pres-meta { display:flex;flex-wrap:wrap;gap:6px;align-items:center; }
+  .pres-link { display:inline-flex;align-items:center;gap:5px;margin-top:8px;font-size:12px;color:#1a56b0;text-decoration:none; }
+  .pres-link:hover { text-decoration:underline; }
 </style>
 </head>
 <body style="margin:0;padding:0;">
+
 <div style="border-bottom:1px solid #e8e8e8;background:#fff;">
   <div style="max-width:860px;margin:0 auto;padding:0.85rem 1.5rem;display:flex;align-items:center;gap:2rem;">
     <a href="index.html" style="text-decoration:none;white-space:nowrap;">
@@ -64,83 +67,171 @@
       <a href="teaching.html" class="nav-link">Teaching</a>
       <a href="projects.html" class="nav-link">Projects</a>
       <a href="blog.html" class="nav-link">Blog</a>
-      <a href="presentations.html" class="nav-link  active">Talks</a>
+      <a href="presentations.html" class="nav-link active">Talks</a>
     </div>
   </div>
 </div>
 
+<div class="content">
 
-<div style="max-width:860px;margin:0 auto;padding:2rem 1.5rem;box-sizing:border-box;">
+  <p class="intro">I regularly organise workshops at leading international venues and present research at conferences across HCI, AI, and robotics.</p>
 
-<p class="intro">Selected conference and workshop presentations covering explainable AI, trustworthy autonomous systems, and human-centred AI design.</p>
+  <div class="stats-row">
+    <span class="stat-pill">4 workshops organised</span>
+    <span class="stat-pill">4 conference presentations</span>
+    <span class="stat-pill">HHAI · IROS · ICRA · ACM SIGCHI · XAI · TAS</span>
+  </div>
 
-<div class="section-title">Presentations</div>
+  <div class="tab-bar">
+    <button class="tab-btn active" onclick="switchTab('workshops', this)">Workshops organised</button>
+    <button class="tab-btn" onclick="switchTab('presentations', this)">Conference presentations</button>
+  </div>
 
-<div class="presentations">
+  <!-- WORKSHOPS -->
+  <div class="tab-panel active" id="tab-workshops">
+    <div class="workshop-grid">
 
-  <!-- 1 -->
-  <div class="pres-card">
-    <div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/u6lj0r1dPUY" title="Designing for Effective Human-XAI" allowfullscreen loading="lazy"></iframe>
-    </div>
-    <div class="pres-body">
-      <div class="pres-title">Designing for Effective Human-XAI Interaction</div>
-      <div class="pres-meta">
-        <span class="tag tag-venue">EXTRAAMAS 2025</span>
-        <span class="tag tag-loc">Detroit, US</span>
-        <span class="tag tag-year">2025</span>
+      <div class="workshop-card">
+        <img class="workshop-img" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=860&q=80" alt="Frictional AI workshop">
+        <div class="workshop-body">
+          <div class="workshop-title">Frictional AI Workshop — Stimulating Cognitive Engagement in Hybrid Decision-Making (2nd Edition)</div>
+          <div class="workshop-tags">
+            <span class="tag tag-organiser">Lead organiser</span>
+            <span class="tag tag-hhai">HHAI 2025</span>
+            <span class="tag tag-venue">Pisa, Italy</span>
+          </div>
+          <p class="workshop-desc">Explored friction, cognitive engagement, and reliance in human-AI decision-making. Featured interdisciplinary contributions across law, psychology, HCI, and AI. Co-organised with Chiara Natali (Milano-Bicocca) and Brett M. Frischmann (Villanova University).</p>
+          <div class="workshop-footer">
+            <span class="workshop-date">June 10, 2025</span>
+            <a class="workshop-link" href="https://sites.google.com/view/frictional-ai/second-edition-hhai25" target="_blank">&#8599; Website</a>
+          </div>
+        </div>
       </div>
-      <a class="watch-link" href="https://youtu.be/u6lj0r1dPUY?si=W5DG2rBm-0m20lwS" target="_blank">&#8599; Watch on YouTube</a>
+
+      <div class="workshop-card">
+        <img class="workshop-img" src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=860&q=80" alt="Human-swarm robotics workshop">
+        <div class="workshop-body">
+          <div class="workshop-title">THUS24: Trustworthy Human-Swarm Interaction</div>
+          <div class="workshop-tags">
+            <span class="tag tag-organiser">Organiser</span>
+            <span class="tag tag-iros">IROS 2024</span>
+            <span class="tag tag-venue">Abu Dhabi, UAE</span>
+          </div>
+          <p class="workshop-desc">Half-day workshop on human-swarm interaction for real-world applications, addressing transparency, trust, and interfacing challenges. Featured keynotes, focus groups, panel discussions, and poster sessions. Accepted papers invited to Swarm Intelligence Journal special issue.</p>
+          <div class="workshop-footer">
+            <span class="workshop-date">October 14, 2024</span>
+            <a class="workshop-link" href="https://sooratilab.com/workshop/iros2024/" target="_blank">&#8599; Website</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="workshop-card">
+        <img class="workshop-img" src="https://images.unsplash.com/photo-1561144257-e32e8efc6c4f?w=860&q=80" alt="MACTAS robotics workshop">
+        <div class="workshop-body">
+          <div class="workshop-title">MACTAS: Multidisciplinary Approaches to Co-Creating Trustworthy Autonomous Systems</div>
+          <div class="workshop-tags">
+            <span class="tag tag-organiser">Organiser</span>
+            <span class="tag tag-icra">ICRA 2023</span>
+            <span class="tag tag-venue">London, UK</span>
+          </div>
+          <p class="workshop-desc">Full-day workshop bringing together researchers from robotics, AI, social science, humanities, design, and law. Included invited talks, panel discussions, focus groups, and a special issue in the Journal of Responsible Technology.</p>
+          <div class="workshop-footer">
+            <span class="workshop-date">May 29, 2023</span>
+            <a class="workshop-link" href="https://mactasworkshop.github.io/2023/" target="_blank">&#8599; Website</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="workshop-card">
+        <img class="workshop-img" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=860&q=80" alt="TAS design methods workshop">
+        <div class="workshop-body">
+          <div class="workshop-title">1st Workshop on Methods, Tools and Techniques for TAS Design and Development</div>
+          <div class="workshop-tags">
+            <span class="tag tag-organiser">Lead organiser</span>
+            <span class="tag tag-acm">ACM SIGCHI EICS 2022</span>
+            <span class="tag tag-venue">Sophia Antipolis, France</span>
+          </div>
+          <p class="workshop-desc">Invited interactive systems experts to discuss requirements modelling methods and tools for trustworthy autonomous systems. Co-organised with Prof. Gopal Ramchurn, Dr. Caitlin Bentley, Dr. Edmond Awad, Dr. Elizabeth Williams, and Christophe Alix (Thales).</p>
+          <div class="workshop-footer">
+            <span class="workshop-date">June 21, 2022</span>
+            <a class="workshop-link" href="https://tas.ac.uk/bigeventscpt/1st-workshop-on-methods-tools-and-techniques-for-tas-design-and-development/" target="_blank">&#8599; Website</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <!-- 2 -->
-  <div class="pres-card">
-    <div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/L32wLweIU3c" title="Well-being of AV users" allowfullscreen loading="lazy"></iframe>
-    </div>
-    <div class="pres-body">
-      <div class="pres-title">The Well-being of Autonomous Vehicle Users under Uncertain Situations</div>
-      <div class="pres-meta">
-        <span class="tag tag-venue">TAS Symposium 2023</span>
-        <span class="tag tag-loc">University of Edinburgh, UK</span>
-        <span class="tag tag-year">2023</span>
-      </div>
-      <a class="watch-link" href="https://www.youtube.com/watch?v=L32wLweIU3c" target="_blank">&#8599; Watch on YouTube</a>
-    </div>
-  </div>
+  <!-- PRESENTATIONS -->
+  <div class="tab-panel" id="tab-presentations">
+    <div class="pres-list">
 
-  <!-- 3 -->
-  <div class="pres-card">
-    <div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/DPy9ZJ0B82E" title="XAI for Trust Calibration" allowfullscreen loading="lazy"></iframe>
-    </div>
-    <div class="pres-body">
-      <div class="pres-title">Explainable AI for Trust Calibration: UX and UI Perspective</div>
-      <div class="pres-meta">
-        <span class="tag tag-venue">UKRI TAS Hub All Hands 2022</span>
-        <span class="tag tag-loc">London, UK</span>
-        <span class="tag tag-year">2022</span>
+      <div class="pres-card">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/u6lj0r1dPUY" title="Designing for Effective Human-XAI" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="pres-body">
+          <div class="pres-title">Designing for Effective Human-XAI Interaction</div>
+          <div class="pres-meta">
+            <span class="tag tag-acm">EXTRAAMAS 2025</span>
+            <span class="tag tag-venue">Detroit, US · 2025</span>
+          </div>
+          <a class="pres-link" href="https://youtu.be/u6lj0r1dPUY" target="_blank">&#8599; Watch on YouTube</a>
+        </div>
       </div>
-      <a class="watch-link" href="https://youtu.be/DPy9ZJ0B82E?si=0WLBIZWCP8vO1Jau" target="_blank">&#8599; Watch on YouTube</a>
-    </div>
-  </div>
 
-  <!-- 4 — image only (not a YouTube link) -->
-  <div class="pres-card">
-    <img src="https://lh3.googleusercontent.com/sitesv/APaQ0SQP3Dthz94S8f6zpcb2bKMchinWP1ASHBBSOnbVKzw1c2bmHBzRS-czCmNZtFNQW5PPzwpEd9gtcvp4uECbaAOX4uU84A0vgSsAOSG-hSQlPOyw1bMPOZNhoVuuSSd1_5edoVdStUqgGQHgZUUnSMa6-0CETsSmUxWWKif9I4la2d8eIQpkMgFDjLhJDX6uZqA0F99xLRrupu_giZC4jCFq0bfxgp7YdXAz=w1280" alt="TAS curriculum design presentation" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;">
-    <div class="pres-body">
-      <div class="pres-title">Trustworthy Autonomous Systems (TAS): Engaging TAS Experts in Curriculum Design</div>
-      <div class="pres-meta">
-        <span class="tag tag-venue">IEEE EDUCON 2022</span>
-        <span class="tag tag-loc">Tunis, Tunisia</span>
-        <span class="tag tag-year">2022</span>
+      <div class="pres-card">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/L32wLweIU3c" title="Well-being of AV users" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="pres-body">
+          <div class="pres-title">The Well-being of Autonomous Vehicle Users under Uncertain Situations</div>
+          <div class="pres-meta">
+            <span class="tag tag-acm">TAS Symposium 2023</span>
+            <span class="tag tag-venue">University of Edinburgh, UK · 2023</span>
+          </div>
+          <a class="pres-link" href="https://www.youtube.com/watch?v=L32wLweIU3c" target="_blank">&#8599; Watch on YouTube</a>
+        </div>
       </div>
+
+      <div class="pres-card">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/DPy9ZJ0B82E" title="XAI for Trust Calibration" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="pres-body">
+          <div class="pres-title">Explainable AI for Trust Calibration: UX and UI Perspective</div>
+          <div class="pres-meta">
+            <span class="tag tag-acm">UKRI TAS Hub All Hands 2022</span>
+            <span class="tag tag-venue">London, UK · 2022</span>
+          </div>
+          <a class="pres-link" href="https://youtu.be/DPy9ZJ0B82E" target="_blank">&#8599; Watch on YouTube</a>
+        </div>
+      </div>
+
+      <div class="pres-card">
+        <img src="https://lh3.googleusercontent.com/sitesv/APaQ0SQP3Dthz94S8f6zpcb2bKMchinWP1ASHBBSOnbVKzw1c2bmHBzRS-czCmNZtFNQW5PPzwpEd9gtcvp4uECbaAOX4uU84A0vgSsAOSG-hSQlPOyw1bMPOZNhoVuuSSd1_5edoVdStUqgGQHgZUUnSMa6-0CETsSmUxWWKif9I4la2d8eIQpkMgFDjLhJDX6uZqA0F99xLRrupu_giZC4jCFq0bfxgp7YdXAz=w1280" alt="TAS curriculum design presentation" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;">
+        <div class="pres-body">
+          <div class="pres-title">Trustworthy Autonomous Systems (TAS): Engaging TAS Experts in Curriculum Design</div>
+          <div class="pres-meta">
+            <span class="tag tag-acm">IEEE EDUCON 2022</span>
+            <span class="tag tag-venue">Tunis, Tunisia · 2022</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
 </div>
 
-</div>
+<script>
+function switchTab(name, btn) {
+  document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+  btn.classList.add('active');
+  document.getElementById('tab-' + name).classList.add('active');
+}
+</script>
+
 </body>
 </html>
