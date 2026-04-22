@@ -5,49 +5,49 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <url>
-    <loc>https://mnaiseh.github.io/Portfolio/index.html</loc>
+    <loc>https://monaiseh.github.io/Portfolio/index.html</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://mnaiseh.github.io/Portfolio/publications.html</loc>
+    <loc>https://monaiseh.github.io/Portfolio/publications.html</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://mnaiseh.github.io/Portfolio/projects.html</loc>
+    <loc>https://monaiseh.github.io/Portfolio/projects.html</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://mnaiseh.github.io/Portfolio/impact.html</loc>
+    <loc>https://monaiseh.github.io/Portfolio/impact.html</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://mnaiseh.github.io/Portfolio/teaching.html</loc>
+    <loc>https://monaiseh.github.io/Portfolio/teaching.html</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://mnaiseh.github.io/Portfolio/presentations.html</loc>
+    <loc>https://monaiseh.github.io/Portfolio/presentations.html</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://mnaiseh.github.io/Portfolio/blog.html</loc>
+    <loc>https://monaiseh.github.io/Portfolio/blog.html</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
