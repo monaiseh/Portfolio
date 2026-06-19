@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Talks, Workshops & Presentations — Dr. Mohammad Naiseh</title>
-<meta name="description" content="Workshops organised and conference presentations by Dr. Mohammad Naiseh on explainable AI, trustworthy autonomous systems, and human-centred AI.">
+<title>Writing & Talks — Dr. Mohammad Naiseh</title>
+<meta name="description" content="Blog posts, workshops organised, and conference presentations by Dr. Mohammad Naiseh on explainable AI, trustworthy autonomous systems, and human-centred AI.">
 <meta name="author" content="Dr. Mohammad Naiseh">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -52,6 +52,22 @@
   .pres-meta { display:flex;flex-wrap:wrap;gap:6px;align-items:center; }
   .pres-link { display:inline-flex;align-items:center;gap:5px;margin-top:8px;font-size:12px;color:#1a56b0;text-decoration:none; }
   .pres-link:hover { text-decoration:underline; }
+  .articles { display: flex; flex-direction: column; gap: 12px; }
+  .article-card { display: flex; align-items: stretch; gap: 0; border: 1px solid #e8e8e8; border-radius: 10px; overflow: hidden; background: #fff; transition: border-color 0.15s, box-shadow 0.15s; text-decoration: none; color: inherit; }
+  .article-card:hover { border-color: #bbb; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .article-thumb { width: 130px; min-width: 130px; overflow: hidden; background: #f5f5f3; }
+  .article-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .article-body { padding: 14px 16px; flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 6px; }
+  .article-title { font-size: 14px; font-weight: 600; color: #1a1a1a; line-height: 1.45; }
+  .article-card:hover .article-title { color: #1a56b0; }
+  .article-meta { display: flex; align-items: center; gap: 8px; }
+  .source-badge { font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; background: #f5f5f3; color: #888; }
+  .source-badge.medium { background: #e8f0fb; color: #1a56b0; }
+  .source-badge.rai { background: #e6f4ea; color: #1e7e34; }
+  .article-arrow { font-size: 14px; color: #ccc; padding-right: 14px; display: flex; align-items: center; }
+  .article-card:hover .article-arrow { color: #1a56b0; }
+  .medium-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 1.5rem; font-size: 13px; color: #1a56b0; border: 1px solid #c5d8f5; padding: 6px 14px; border-radius: 6px; background: #f0f6ff; text-decoration: none; }
+  .medium-link:hover { background: #e0eeff; }
 </style>
 </head>
 <body style="margin:0;padding:0;">
@@ -74,21 +90,88 @@
 
 <div class="content">
 
-  <p class="intro">I regularly organise workshops at leading international venues and present research at conferences across HCI, AI, and robotics.</p>
+  <p class="intro">I write on responsible AI and explainability, organise workshops at leading international venues, and present research at conferences across HCI, AI, and robotics.</p>
 
   <div class="stats-row">
+    <span class="stat-pill">4 articles</span>
     <span class="stat-pill">4 workshops organised</span>
     <span class="stat-pill">4 conference presentations</span>
     <span class="stat-pill">HHAI · IROS · ICRA · ACM SIGCHI · XAI · TAS</span>
   </div>
 
   <div class="tab-bar">
-    <button class="tab-btn active" onclick="switchTab('workshops', this)">Workshops organised</button>
+    <button class="tab-btn active" onclick="switchTab('blog', this)">Blog posts</button>
+    <button class="tab-btn" onclick="switchTab('workshops', this)">Workshops organised</button>
     <button class="tab-btn" onclick="switchTab('presentations', this)">Conference presentations</button>
   </div>
 
+  <!-- BLOG -->
+  <div class="tab-panel active" id="tab-blog">
+
+    <div class="articles">
+
+      <a class="article-card" href="https://mohammadnaiseh.medium.com/ai-vs-ghibli-when-generative-art-crosses-the-line-0f938a9284fa" target="_blank">
+        <div class="article-thumb">
+          <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*N4IyDP9VEMcxZ7jwT2TNXQ.png" alt="AI vs Ghibli article thumbnail">
+        </div>
+        <div class="article-body">
+          <div class="article-title">AI vs. Ghibli: When Generative Art Crosses the Line</div>
+          <div class="article-meta">
+            <span class="source-badge medium">Medium</span>
+          </div>
+        </div>
+        <div class="article-arrow">&#8599;</div>
+      </a>
+
+      <a class="article-card" href="https://rai.ac.uk/four-things-to-look-for-when-choosing-your-next-responsible-ai-training/" target="_blank">
+        <div class="article-thumb">
+          <img src="https://rai.ac.uk/wp-content/uploads/2024/03/logo.png" alt="Responsible AI UK article thumbnail">
+        </div>
+        <div class="article-body">
+          <div class="article-title">Four Things to Look for When Choosing Your Next Responsible AI Training</div>
+          <div class="article-meta">
+            <span class="source-badge rai">Responsible AI UK</span>
+          </div>
+        </div>
+        <div class="article-arrow">&#8599;</div>
+      </a>
+
+      <a class="article-card" href="https://medium.com/@mohammadnaiseh/responsible-ai-fail-safe-mechanisms-for-trustworthy-ai-3b31414ba517" target="_blank">
+        <div class="article-thumb">
+          <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*Wm79xEfjVd1AuQbZqXgCow.png" alt="Responsible AI article thumbnail">
+        </div>
+        <div class="article-body">
+          <div class="article-title">Responsible AI: Fail-Safe Mechanisms for Trustworthy AI</div>
+          <div class="article-meta">
+            <span class="source-badge medium">Medium</span>
+          </div>
+        </div>
+        <div class="article-arrow">&#8599;</div>
+      </a>
+
+      <a class="article-card" href="https://medium.com/@mohammadnaiseh/grad-cam-explainable-ai-for-beginners-b691084bff2b/" target="_blank">
+        <div class="article-thumb">
+          <img src="https://miro.medium.com/v2/resize:fit:1280/format:webp/1*OtSsFAkv8jUM4VvRr96CEQ.jpeg" alt="Grad-CAM article thumbnail">
+        </div>
+        <div class="article-body">
+          <div class="article-title">Grad-CAM: Explainable AI for Beginners</div>
+          <div class="article-meta">
+            <span class="source-badge medium">Medium</span>
+          </div>
+        </div>
+        <div class="article-arrow">&#8599;</div>
+      </a>
+
+    </div>
+
+    <a class="medium-link" href="https://medium.com/@mohammadnaiseh" target="_blank">
+      &#128221; View all articles on Medium
+    </a>
+
+  </div>
+
   <!-- WORKSHOPS -->
-  <div class="tab-panel active" id="tab-workshops">
+  <div class="tab-panel" id="tab-workshops">
     <div class="workshop-grid">
 
       <div class="workshop-card">
