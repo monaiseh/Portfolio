@@ -18,124 +18,180 @@
   --ease-out:cubic-bezier(0.16,1,0.3,1);
   --ease-spring:cubic-bezier(0.34,1.56,0.64,1);
   --ease-smooth:cubic-bezier(0.65,0,0.35,1);
-  --cream:#F7F3ED;--dark:#0E0C0A;--brown:#2C2416;--tan:#8C7B5E;
-  --accent:#3B5BDB;--border:#E0D8CE;--white:#fff;
+  --dark:#0B1629;
+  --body-bg:#F5F7FC;
+  --accent:#4A72D1;
+  --accent-light:#7B9CEC;
+  --accent-pale:#EEF2FF;
+  --border:#D8E0F0;
+  --white:#fff;
+  --text:#0B1629;
+  --muted:#8A96B0;
+  --tan:#4A72D1;
 }
-body{font-family:'Inter',sans-serif;background:var(--cream);color:#1a1a1a;font-size:15px;line-height:1.7;overflow-x:hidden;}
+body{font-family:'Inter',sans-serif;background:var(--body-bg);color:var(--text);font-size:15px;line-height:1.7;overflow-x:hidden;}
+
+/* STICKY NAV */
+.sticky-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(11,22,41,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,0.07);padding:0 2rem;transform:translateY(-100%);transition:transform 0.3s var(--ease-out);pointer-events:none;}
+.sticky-nav.visible{transform:translateY(0);pointer-events:all;}
+.sticky-inner{max-width:700px;margin:0 auto;display:flex;align-items:center;height:44px;gap:1rem;}
+.sticky-name{font-family:'DM Serif Display',serif;font-size:15px;color:#EEF2FF;white-space:nowrap;margin-right:auto;}
+.sticky-name em{font-style:italic;color:var(--accent-light);}
+.sticky-links{display:flex;}
+.sticky-links a{font-size:11px;color:rgba(238,242,255,0.38);text-decoration:none;padding:4px 10px;transition:color 0.15s;white-space:nowrap;}
+.sticky-links a:hover{color:#EEF2FF;}
+.sticky-links a.active{color:#EEF2FF;}
 
 /* HEADER */
 .hdr{background:var(--dark);padding:2.5rem 2rem 0;}
-.hdr-inner{max-width:680px;margin:0 auto;}
-.hdr-top{display:flex;gap:1.25rem;align-items:flex-start;padding-bottom:1.5rem;}
-.avatar{width:68px;height:68px;border-radius:50%;border:2px solid rgba(255,255,255,0.1);overflow:hidden;flex-shrink:0;background:#1a1510;display:flex;align-items:center;justify-content:center;}
-.avatar img{width:100%;height:100%;object-fit:cover;}
-.avatar-fb{font-family:'DM Serif Display',serif;font-size:24px;color:var(--tan);}
-.name{font-family:'DM Serif Display',serif;font-size:30px;line-height:1.1;color:var(--cream);margin-bottom:4px;}
-.name em{font-style:italic;color:var(--tan);}
-.role-line{font-size:11px;color:rgba(255,255,255,0.35);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.9rem;}
+.hdr-inner{max-width:700px;margin:0 auto;}
+.hdr-top{display:flex;gap:0;align-items:stretch;}
+.hdr-text{flex:1;padding-bottom:1.5rem;padding-right:2rem;}
+.dr-prefix{font-size:11px;color:var(--accent-light);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:5px;font-weight:500;}
+.name{font-family:'DM Serif Display',serif;font-size:34px;line-height:1.05;color:#EEF2FF;margin-bottom:6px;}
+.name em{font-style:italic;color:var(--accent-light);}
+.role-line{font-size:11px;color:rgba(238,242,255,0.35);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:1rem;line-height:1.65;}
 .tw-wrap{display:flex;align-items:center;gap:8px;}
-.tw-label{font-size:10px;color:rgba(255,255,255,0.25);letter-spacing:0.08em;text-transform:uppercase;flex-shrink:0;}
-.tw-text{font-size:13px;color:var(--cream);font-weight:500;min-height:20px;}
-.cursor{display:inline-block;width:1.5px;height:13px;background:var(--accent);margin-left:1px;vertical-align:middle;animation:blink 1s step-end infinite;}
+.tw-label{font-size:10px;color:rgba(238,242,255,0.22);letter-spacing:0.08em;text-transform:uppercase;flex-shrink:0;}
+.tw-text{font-size:12.5px;color:#EEF2FF;font-weight:500;min-height:20px;}
+.cursor{display:inline-block;width:1.5px;height:12px;background:var(--accent-light);margin-left:1px;vertical-align:middle;animation:blink 1s step-end infinite;}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
 
+/* PHOTO */
+.hdr-photo{width:140px;min-width:140px;overflow:hidden;background:#0d1e38;align-self:stretch;display:flex;align-items:flex-end;}
+.hdr-photo img{width:100%;display:block;object-fit:cover;filter:grayscale(10%);}
+.hdr-photo-fb{width:100%;height:180px;display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:36px;color:var(--accent-light);}
+
+/* SEPARATOR */
+.hdr-sep{height:2px;background:linear-gradient(to right,var(--accent) 0%,transparent 100%);}
+
 /* NAV */
-.nav{border-top:1px solid rgba(255,255,255,0.07);display:flex;position:relative;overflow-x:auto;}
-.nav-pill{position:absolute;bottom:0;height:2px;background:var(--accent);border-radius:2px 2px 0 0;transition:left 0.28s var(--ease-smooth),width 0.28s var(--ease-smooth);}
-.nav a{font-size:11.5px;color:rgba(255,255,255,0.35);text-decoration:none;padding:11px 13px;letter-spacing:0.03em;transition:color 0.15s;white-space:nowrap;}
-.nav a:hover{color:rgba(255,255,255,0.72);}
-.nav a.active{color:var(--cream);}
+.nav-bar{background:var(--dark);}
+.nav-inner{max-width:700px;margin:0 auto;display:flex;position:relative;}
+.nav-pill{position:absolute;bottom:0;height:2px;background:var(--accent-light);border-radius:2px 2px 0 0;transition:left 0.28s var(--ease-smooth),width 0.28s var(--ease-smooth);}
+.nav-inner a{font-size:11.5px;color:rgba(238,242,255,0.35);text-decoration:none;padding:11px 13px;letter-spacing:0.03em;transition:color 0.15s;white-space:nowrap;}
+.nav-inner a:hover{color:rgba(238,242,255,0.75);}
+.nav-inner a.active{color:#EEF2FF;}
 
 /* BODY */
-.body{max-width:680px;margin:0 auto;padding:2rem 2rem 3rem;}
+.body{max-width:700px;margin:0 auto;padding:2.5rem 2rem 4rem;}
 
-/* BIO */
-.bio{font-family:'DM Serif Display',serif;font-size:16.5px;line-height:1.85;color:#3a3028;margin-bottom:1.75rem;font-style:italic;border-left:2px solid var(--tan);padding-left:1rem;opacity:0;transform:translateY(10px);transition:opacity 0.45s var(--ease-out),transform 0.45s var(--ease-out);}
-.bio.in{opacity:1;transform:translateY(0);}
+/* THESIS */
+.thesis{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.78;color:#111d33;margin-bottom:2.25rem;font-style:italic;opacity:0;transform:translateY(12px);transition:opacity 0.5s var(--ease-out),transform 0.5s var(--ease-out);}
+.thesis.in{opacity:1;transform:translateY(0);}
 
-/* STATS */
-.stats{display:flex;gap:2.5rem;margin-bottom:0.25rem;opacity:0;transform:translateY(8px);transition:opacity 0.4s var(--ease-out) 0.08s,transform 0.4s var(--ease-out) 0.08s;}
-.stats.in{opacity:1;transform:translateY(0);}
-.stat-val{font-family:'DM Serif Display',serif;font-size:26px;color:var(--brown);line-height:1;}
-.stat-lab{font-size:10px;color:#9a8f83;text-transform:uppercase;letter-spacing:0.07em;margin-top:2px;}
+/* STATS BAND */
+.stats-band{display:flex;gap:0;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--white);margin-bottom:0.25rem;opacity:0;transform:translateY(8px);transition:opacity 0.4s var(--ease-out) 0.1s,transform 0.4s var(--ease-out) 0.1s;}
+.stats-band.in{opacity:1;transform:translateY(0);}
+.stat{flex:1;padding:18px 16px;border-right:1px solid var(--border);text-align:center;transition:background 0.15s;cursor:default;position:relative;}
+.stat:last-child{border-right:none;}
+.stat:hover{background:var(--accent-pale);}
+.stat-val{font-family:'DM Serif Display',serif;font-size:30px;color:var(--dark);line-height:1;}
+.stat-lab{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;margin-top:3px;}
 
 /* SECTION LABEL */
-.sec{font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#9a8f83;margin-bottom:0.9rem;margin-top:2.25rem;padding-bottom:6px;border-bottom:1px solid var(--border);}
+.sec{font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;margin-top:2.5rem;padding-bottom:6px;border-bottom:1px solid var(--border);}
 
-/* NEWS */
-.news{border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--white);}
-.news-item{display:flex;gap:11px;align-items:flex-start;padding:13px 15px;border-bottom:1px solid #f0ebe3;text-decoration:none;color:inherit;opacity:0;transform:translateX(-8px);transition:opacity 0.32s var(--ease-out),transform 0.32s var(--ease-out),background 0.15s;}
-.news-item:last-child{border-bottom:none;}
-.news-item.in{opacity:1;transform:translateX(0);}
-.news-item:hover{background:#faf6f0;}
-.ndate{min-width:42px;text-align:right;flex-shrink:0;padding-top:2px;}
-.nday{font-size:15px;font-weight:600;color:var(--brown);line-height:1;font-family:'DM Serif Display',serif;}
-.nmon{font-size:9px;color:#b5aaa0;text-transform:uppercase;letter-spacing:0.05em;}
-.ntitle{font-size:12.5px;font-weight:500;color:#1a1a1a;line-height:1.4;margin-bottom:1px;}
-.ndesc{font-size:11px;color:#9a8f83;line-height:1.45;}
-.ntag{flex-shrink:0;align-self:flex-start;padding-top:2px;}
-.tag{font-size:10px;padding:2px 8px;border-radius:3px;font-weight:500;letter-spacing:0.02em;}
-.tag-pub{background:#EAF1FB;color:#1a4faa;}
+/* TIMELINE */
+.timeline{position:relative;padding-left:28px;}
+.timeline::before{content:'';position:absolute;left:5px;top:8px;bottom:8px;width:1px;background:var(--border);}
+.tl-item{position:relative;opacity:0;transform:translateX(-8px);transition:opacity 0.32s var(--ease-out),transform 0.32s var(--ease-out);}
+.tl-item.in{opacity:1;transform:translateX(0);}
+.tl-item::before{content:'';position:absolute;left:-23px;top:16px;width:7px;height:7px;border-radius:50%;background:var(--body-bg);border:1.5px solid var(--accent);transition:background 0.15s;}
+.tl-item:hover::before{background:var(--accent);}
+.tl-link{display:block;padding:10px 12px;border-radius:7px;text-decoration:none;color:inherit;transition:background 0.15s;}
+.tl-link:hover{background:rgba(255,255,255,0.8);}
+.tl-meta{display:flex;align-items:center;gap:7px;margin-bottom:3px;}
+.tl-date{font-size:10.5px;color:var(--accent);font-weight:600;letter-spacing:0.03em;}
+.tl-tag{font-size:10px;padding:1px 7px;border-radius:3px;font-weight:500;letter-spacing:0.02em;}
+.tag-pub{background:var(--accent-pale);color:var(--accent);}
 .tag-teach{background:#E8F5E9;color:#2a6e2e;}
 .tag-ws{background:#EDE7F6;color:#4a278a;}
+.tl-title{font-size:12.5px;font-weight:500;color:var(--text);line-height:1.4;}
+.tl-desc{font-size:11px;color:var(--muted);margin-top:1px;}
 
 /* THEMES */
 .themes{display:flex;gap:7px;flex-wrap:wrap;}
-.theme{font-size:11.5px;padding:5px 13px;border-radius:20px;border:1px solid #d4c5b0;color:#5a4535;background:#fdf9f4;font-weight:500;cursor:default;transition:background 0.18s,border-color 0.18s,transform 0.22s var(--ease-spring);}
-.theme:hover{background:#f5ede0;border-color:#b09070;transform:translateY(-2px);}
+.theme{font-size:11.5px;padding:5px 13px;border-radius:20px;border:1px solid var(--border);color:#2a3d6b;background:var(--accent-pale);font-weight:500;cursor:default;transition:background 0.18s,border-color 0.18s,transform 0.22s var(--ease-spring);}
+.theme:hover{background:#dce6fa;border-color:#a0b4e0;transform:translateY(-2px);}
 
-/* EXPLORE CARDS */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--border);}
-.card{display:flex;flex-direction:column;gap:4px;padding:16px 15px;background:var(--white);text-decoration:none;color:#1a1a1a;transition:background 0.15s,transform 0.22s var(--ease-spring);opacity:0;transform:translateY(6px);will-change:transform;}
-.card.in{opacity:1;transform:translateY(0);}
-.card:hover{background:#faf6f0;transform:translateY(-2px);}
-.card:active{transform:translateY(0);}
-.card-eyebrow{font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--tan);}
-.card-label{font-size:13px;font-weight:600;color:var(--brown);line-height:1.2;}
-.card-sub{font-size:11px;color:#9a8f83;margin-top:1px;}
+/* EXPLORE ROW */
+.explore{display:flex;gap:1px;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--border);}
+.explore-item{flex:1;display:flex;align-items:center;justify-content:space-between;padding:14px 15px;background:var(--white);text-decoration:none;color:var(--text);transition:background 0.15s,transform 0.2s var(--ease-spring);opacity:0;transform:translateY(5px);}
+.explore-item.in{opacity:1;transform:translateY(0);}
+.explore-item:hover{background:var(--accent-pale);transform:translateY(-2px);}
+.explore-item:active{transform:translateY(0);}
+.exp-eyebrow{font-size:9.5px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);}
+.exp-label{font-size:12.5px;font-weight:600;color:var(--dark);line-height:1.2;}
+.exp-arrow{font-size:14px;color:var(--border);transition:color 0.15s,transform 0.2s var(--ease-spring);}
+.explore-item:hover .exp-arrow{color:var(--accent);transform:translateX(3px);}
 
-/* RECOGNITION */
-.awards{display:flex;gap:8px;flex-wrap:wrap;}
-.award{flex:1;min-width:160px;display:flex;flex-direction:column;gap:3px;background:var(--white);border:1px solid var(--border);border-top:2px solid var(--brown);border-radius:8px;padding:12px 13px;text-decoration:none;color:inherit;transition:transform 0.22s var(--ease-spring),box-shadow 0.22s;}
-.award:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(44,36,22,0.07);}
-.award:active{transform:translateY(-1px);}
-.award-label{font-size:12px;font-weight:600;color:#1a1a1a;line-height:1.35;}
-.award-sub{font-size:10.5px;color:#9a8f83;}
+/* RECOGNITION LIST */
+.recog-list{display:flex;flex-direction:column;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--white);}
+.recog-item{display:flex;align-items:baseline;gap:10px;padding:12px 15px;border-bottom:1px solid #EEF2FF;text-decoration:none;color:inherit;transition:background 0.15s;}
+.recog-item:last-child{border-bottom:none;}
+.recog-item:hover{background:var(--accent-pale);}
+.recog-dash{font-size:11px;color:var(--accent);flex-shrink:0;font-weight:600;}
+.recog-label{font-size:12.5px;font-weight:500;color:var(--text);flex:1;line-height:1.4;}
+.recog-sub{font-size:11px;color:var(--muted);white-space:nowrap;}
 
 /* PROFILES */
 .profiles{display:flex;flex-wrap:wrap;gap:6px;}
-.profile{font-size:11.5px;padding:5px 11px;background:var(--white);border:1px solid var(--border);border-radius:5px;text-decoration:none;color:var(--accent);transition:background 0.15s,border-color 0.15s,transform 0.2s var(--ease-spring);}
-.profile:hover{background:#f0f4ff;border-color:#b5c8f8;transform:translateY(-2px);}
+.profile{font-size:11.5px;padding:5px 12px;background:var(--white);border:1px solid var(--border);border-radius:5px;text-decoration:none;color:var(--accent);font-weight:500;transition:background 0.15s,border-color 0.15s,transform 0.2s var(--ease-spring);}
+.profile:hover{background:var(--accent-pale);border-color:#a0b4e0;transform:translateY(-2px);}
 
-@media(max-width:520px){
+@media(max-width:560px){
   .hdr{padding:1.75rem 1.25rem 0;}
-  .body{padding:1.5rem 1.25rem 2.5rem;}
-  .stats{gap:1.5rem;}
-  .name{font-size:24px;}
+  .body{padding:1.5rem 1.25rem 3rem;}
+  .hdr-photo{width:90px;min-width:90px;}
+  .name{font-size:26px;}
+  .thesis{font-size:17px;}
+  .stat-val{font-size:22px;}
+  .stat{padding:14px 10px;}
+  .explore{flex-direction:column;}
+  .sticky-links{display:none;}
 }
 @media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
 </style>
 </head>
 <body>
 
-<header class="hdr">
+<div class="sticky-nav" id="sticky">
+  <div class="sticky-inner">
+    <div class="sticky-name">Dr. Mohammad <em>Naiseh</em></div>
+    <div class="sticky-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="projects.html">Projects</a>
+      <a href="presentations.html">Writing &amp; Talks</a>
+      <a href="impact.html">Impact</a>
+    </div>
+  </div>
+</div>
+
+<header class="hdr" id="hdr">
   <div class="hdr-inner">
     <div class="hdr-top">
-      <div class="avatar">
-        <img src="photo.jpg" alt="Dr. Mohammad Naiseh"
-          onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <span class="avatar-fb" style="display:none">MN</span>
-      </div>
-      <div style="flex:1">
-        <div class="name">Dr. Mohammad <em>Naiseh</em></div>
-        <div class="role-line">Lecturer &middot; MSc AI Programme Leader &middot; University of Aberdeen, Doha</div>
+      <div class="hdr-text">
+        <div class="dr-prefix">Dr.</div>
+        <div class="name">Mohammad <em>Naiseh</em></div>
+        <div class="role-line">Lecturer &amp; MSc AI Programme Leader<br>University of Aberdeen &middot; Doha, Qatar</div>
         <div class="tw-wrap">
           <span class="tw-label">Research</span>
           <span class="tw-text" id="tw"></span><span class="cursor"></span>
         </div>
       </div>
+      <div class="hdr-photo">
+        <img src="photo.jpg" alt="Dr. Mohammad Naiseh"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="hdr-photo-fb" style="display:none">MN</div>
+      </div>
     </div>
-    <nav class="nav" id="nav" aria-label="Site navigation">
+  </div>
+  <div class="hdr-sep"></div>
+  <nav class="nav-bar" aria-label="Site navigation">
+    <div class="nav-inner" id="nav-inner">
       <div class="nav-pill" id="pill"></div>
       <a href="index.html" class="active">Home</a>
       <a href="publications.html">Publications</a>
@@ -143,67 +199,63 @@ body{font-family:'Inter',sans-serif;background:var(--cream);color:#1a1a1a;font-s
       <a href="projects.html">Projects</a>
       <a href="presentations.html">Writing &amp; Talks</a>
       <a href="impact.html">Impact</a>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </header>
 
 <main class="body">
 
-  <p class="bio" id="bio">Designing AI that humans can understand, trust, and control — through research at the intersection of explainability, human-centred design, and responsible AI governance.</p>
+  <p class="thesis" id="thesis">Designing AI that humans can understand, trust, and control — through research at the intersection of explainability, human-centred design, and responsible AI governance.</p>
 
-  <div class="stats" id="stats">
-    <div><div class="stat-val">49+</div><div class="stat-lab">Publications</div></div>
-    <div><div class="stat-val">900+</div><div class="stat-lab">Citations</div></div>
-    <div><div class="stat-val">&#8364;16M+</div><div class="stat-lab">Research funding</div></div>
+  <div class="stats-band" id="stats">
+    <div class="stat"><div class="stat-val">49+</div><div class="stat-lab">Publications</div></div>
+    <div class="stat"><div class="stat-val">900+</div><div class="stat-lab">Citations</div></div>
+    <div class="stat"><div class="stat-val">&#8364;16M+</div><div class="stat-lab">Research funding</div></div>
+    <div class="stat"><div class="stat-val">4</div><div class="stat-lab">Workshops organised</div></div>
   </div>
 
   <div class="sec">News &amp; updates</div>
-  <div class="news">
+  <div class="timeline">
 
-    <a class="news-item" href="https://www.instagram.com/p/DXqdML_jPWR/" target="_blank" rel="noopener">
-      <div class="ndate"><div class="nday">19</div><div class="nmon">May 26</div></div>
-      <div style="flex:1">
-        <div class="ntitle">Webinar: Trusting the Machine — When to Use AI and When to Think for Yourself</div>
-        <div class="ndesc">AFG College / University of Aberdeen, Doha</div>
-      </div>
-      <div class="ntag"><span class="tag tag-teach">Teaching</span></div>
-    </a>
+    <div class="tl-item">
+      <a class="tl-link" href="https://www.instagram.com/p/DXqdML_jPWR/" target="_blank" rel="noopener">
+        <div class="tl-meta"><span class="tl-date">19 May 2026</span><span class="tl-tag tag-teach">Teaching</span></div>
+        <div class="tl-title">Webinar: Trusting the Machine — When to Use AI and When to Think for Yourself</div>
+        <div class="tl-desc">AFG College / University of Aberdeen, Doha</div>
+      </a>
+    </div>
 
-    <a class="news-item" href="publications.html">
-      <div class="ndate"><div class="nday">2026</div><div class="nmon">Paper</div></div>
-      <div style="flex:1">
-        <div class="ntitle">Do Language Models Help or Harm? — IEEE Conference on Artificial Intelligence (CAI) 2026</div>
-        <div class="ndesc">Role of LLM-generated explanations in human-AI image classification tasks</div>
-      </div>
-      <div class="ntag"><span class="tag tag-pub">Publication</span></div>
-    </a>
+    <div class="tl-item">
+      <a class="tl-link" href="publications.html">
+        <div class="tl-meta"><span class="tl-date">2026</span><span class="tl-tag tag-pub">Publication</span></div>
+        <div class="tl-title">Do Language Models Help or Harm? — IEEE Conference on Artificial Intelligence (CAI) 2026</div>
+        <div class="tl-desc">Role of LLM-generated explanations in human-AI image classification tasks</div>
+      </a>
+    </div>
 
-    <a class="news-item" href="https://www.abdn.ac.uk/qatar/news/25213/" target="_blank" rel="noopener">
-      <div class="ndate"><div class="nday">16</div><div class="nmon">Feb 26</div></div>
-      <div style="flex:1">
-        <div class="ntitle">Workshop: Designing AI for Humans — Building Fair and Responsible Intelligent Systems</div>
-        <div class="ndesc">University of Aberdeen Qatar</div>
-      </div>
-      <div class="ntag"><span class="tag tag-teach">Teaching</span></div>
-    </a>
+    <div class="tl-item">
+      <a class="tl-link" href="https://www.abdn.ac.uk/qatar/news/25213/" target="_blank" rel="noopener">
+        <div class="tl-meta"><span class="tl-date">16 Feb 2026</span><span class="tl-tag tag-teach">Teaching</span></div>
+        <div class="tl-title">Workshop: Designing AI for Humans — Building Fair and Responsible Intelligent Systems</div>
+        <div class="tl-desc">University of Aberdeen Qatar</div>
+      </a>
+    </div>
 
-    <a class="news-item" href="publications.html">
-      <div class="ndate"><div class="nday">2025</div><div class="nmon">Paper</div></div>
-      <div style="flex:1">
-        <div class="ntitle">Oesophageal cancer multi-disciplinary ML tool published in EClinicalMedicine (Elsevier)</div>
-        <div class="ndesc">Co-designed, externally validated machine learning tool for clinical decision-making</div>
-      </div>
-      <div class="ntag"><span class="tag tag-pub">Publication</span></div>
-    </a>
+    <div class="tl-item">
+      <a class="tl-link" href="publications.html">
+        <div class="tl-meta"><span class="tl-date">2025</span><span class="tl-tag tag-pub">Publication</span></div>
+        <div class="tl-title">Oesophageal cancer ML tool published in EClinicalMedicine (Elsevier)</div>
+        <div class="tl-desc">Co-designed, externally validated machine learning tool for clinical decision-making</div>
+      </a>
+    </div>
 
-    <a class="news-item" href="presentations.html">
-      <div class="ndate"><div class="nday">Jun</div><div class="nmon">2025</div></div>
-      <div style="flex:1">
-        <div class="ntitle">Organised Frictional AI Workshop (2nd edition) at HHAI 2025, Pisa</div>
-        <div class="ndesc">Cognitive engagement and reliance in hybrid human-AI decision-making</div>
-      </div>
-      <div class="ntag"><span class="tag tag-ws">Workshop</span></div>
-    </a>
+    <div class="tl-item">
+      <a class="tl-link" href="presentations.html">
+        <div class="tl-meta"><span class="tl-date">Jun 2025</span><span class="tl-tag tag-ws">Workshop</span></div>
+        <div class="tl-title">Organised Frictional AI Workshop (2nd edition) at HHAI 2025, Pisa</div>
+        <div class="tl-desc">Cognitive engagement and reliance in hybrid human-AI decision-making</div>
+      </a>
+    </div>
 
   </div>
 
@@ -219,46 +271,51 @@ body{font-family:'Inter',sans-serif;background:var(--cream);color:#1a1a1a;font-s
   </div>
 
   <div class="sec">Explore</div>
-  <div class="cards">
-    <a class="card" href="publications.html">
-      <div class="card-eyebrow">Research</div>
-      <div class="card-label">Publications</div>
-      <div class="card-sub">49+ papers &middot; 900+ citations</div>
+  <div class="explore">
+    <a class="explore-item" href="publications.html">
+      <div><div class="exp-eyebrow">Research</div><div class="exp-label">Publications</div></div>
+      <span class="exp-arrow">&#8594;</span>
     </a>
-    <a class="card" href="teaching.html">
-      <div class="card-eyebrow">Education</div>
-      <div class="card-label">Teaching</div>
-      <div class="card-sub">Aberdeen &middot; BU &middot; Southampton</div>
+    <a class="explore-item" href="teaching.html">
+      <div><div class="exp-eyebrow">Education</div><div class="exp-label">Teaching</div></div>
+      <span class="exp-arrow">&#8594;</span>
     </a>
-    <a class="card" href="presentations.html">
-      <div class="card-eyebrow">Scholarship</div>
-      <div class="card-label">Writing &amp; Talks</div>
-      <div class="card-sub">Articles &amp; presentations</div>
+    <a class="explore-item" href="presentations.html">
+      <div><div class="exp-eyebrow">Scholarship</div><div class="exp-label">Writing &amp; Talks</div></div>
+      <span class="exp-arrow">&#8594;</span>
     </a>
-    <a class="card" href="impact.html">
-      <div class="card-eyebrow">Recognition</div>
-      <div class="card-label">Impact</div>
-      <div class="card-sub">Awards &amp; policy</div>
+    <a class="explore-item" href="impact.html">
+      <div><div class="exp-eyebrow">Recognition</div><div class="exp-label">Impact</div></div>
+      <span class="exp-arrow">&#8594;</span>
     </a>
   </div>
 
   <div class="sec">Recognition</div>
-  <div class="awards">
-    <a class="award" href="impact.html">
-      <div class="award-label">Best Paper Award</div>
-      <div class="award-sub">TAS Symposium 2023 &middot; Edinburgh</div>
+  <div class="recog-list">
+    <a class="recog-item" href="impact.html">
+      <span class="recog-dash">&#8212;</span>
+      <span class="recog-label">Best Paper Award, TAS Symposium</span>
+      <span class="recog-sub">Edinburgh &middot; 2023</span>
     </a>
-    <a class="award" href="impact.html">
-      <div class="award-label">Award Finalist &mdash; Royal Society</div>
-      <div class="award-sub">AI &amp; Robotics Research Awards 2025</div>
+    <a class="recog-item" href="impact.html">
+      <span class="recog-dash">&#8212;</span>
+      <span class="recog-label">Award Finalist, AI &amp; Robotics Research Awards &mdash; Royal Society</span>
+      <span class="recog-sub">London &middot; 2025</span>
     </a>
-    <a class="award" href="impact.html">
-      <div class="award-label">Cited in UK Parliament</div>
-      <div class="award-sub">POST Briefing &middot; AI &amp; Mental Healthcare</div>
+    <a class="recog-item" href="impact.html">
+      <span class="recog-dash">&#8212;</span>
+      <span class="recog-label">Cited in UK Parliamentary POST Briefing on AI &amp; Mental Healthcare</span>
+      <span class="recog-sub">2025</span>
     </a>
-    <a class="award" href="impact.html">
-      <div class="award-label">Top Cited &mdash; IJHCS &amp; JRT</div>
-      <div class="award-sub">Elsevier &middot; ongoing</div>
+    <a class="recog-item" href="impact.html">
+      <span class="recog-dash">&#8212;</span>
+      <span class="recog-label">Top Cited Article &mdash; International Journal of Human-Computer Studies</span>
+      <span class="recog-sub">Elsevier &middot; ongoing</span>
+    </a>
+    <a class="recog-item" href="impact.html">
+      <span class="recog-dash">&#8212;</span>
+      <span class="recog-label">Top Cited Article &mdash; Journal of Responsible Technology</span>
+      <span class="recog-sub">Elsevier &middot; ongoing</span>
     </a>
   </div>
 
@@ -285,27 +342,33 @@ function tick(){
 }
 tick();
 
-const active=document.querySelector('.nav a.active');
+const active=document.querySelector('.nav-inner a.active');
 const pill=document.getElementById('pill');
 function movePill(el){pill.style.left=el.offsetLeft+'px';pill.style.width=el.offsetWidth+'px';}
 if(active)movePill(active);
-document.querySelectorAll('.nav a').forEach(a=>{
+document.querySelectorAll('.nav-inner a').forEach(a=>{
   a.addEventListener('mouseenter',()=>movePill(a));
   a.addEventListener('mouseleave',()=>{if(active)movePill(active);});
 });
 
-document.getElementById('bio').classList.add('in');
+const sticky=document.getElementById('sticky');
+const hdr=document.getElementById('hdr');
+new IntersectionObserver(([e])=>{
+  sticky.classList.toggle('visible',!e.isIntersecting);
+},{threshold:0}).observe(hdr);
+
+document.getElementById('thesis').classList.add('in');
 document.getElementById('stats').classList.add('in');
 
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});
-},{threshold:0.08});
+},{threshold:0.05});
 
-document.querySelectorAll('.news-item').forEach((el,i)=>{
-  el.style.transitionDelay=(i*55)+'ms';obs.observe(el);
+document.querySelectorAll('.tl-item').forEach((el,i)=>{
+  el.style.transitionDelay=(i*60)+'ms';obs.observe(el);
 });
-document.querySelectorAll('.card').forEach((el,i)=>{
-  el.style.transitionDelay=(i*50)+'ms';obs.observe(el);
+document.querySelectorAll('.explore-item').forEach((el,i)=>{
+  el.style.transitionDelay=(i*45)+'ms';obs.observe(el);
 });
 </script>
 </body>
